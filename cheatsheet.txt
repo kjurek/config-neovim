@@ -1,0 +1,20 @@
+# My notes
+
+## Utilities
+Edit Config                 | :e ~/.config/nvim/init.lua
+
+## json
+Pretty Print                | :%!jq
+Minify                      | :%!jq -r tostring
+
+## mini.files
+Open                        | <Space>e
+Close                       | q
+
+## Fold
+Fold Close                  | zc
+Preview Fold                | h
+
+## Fzf
+Find Buffers                | <Space>fb
+Find Files                  | <Space>ff

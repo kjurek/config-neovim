@@ -9,9 +9,8 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
+vim.g.mapleader = " "
 vim.opt.rtp:prepend(lazypath)
-require("options")
 require("lazy").setup("plugins")
+require("options")
 require("keybinds")
-require("colorscheme")
-require("nvim-lspconfig")

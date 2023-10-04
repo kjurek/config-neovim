@@ -1,6 +1,11 @@
 # My notes
 
-## Utilities
+## buffers
+Previous buffer             | [b
+Next buffer                 | ]b
+Wipe buffer                 | :bw
+
+## utilities
 Edit Config                 | :e ~/.config/nvim/init.lua
 
 ## json
@@ -10,11 +15,34 @@ Minify                      | :%!jq -r tostring
 ## mini.files
 Open                        | <Space>e
 Close                       | q
+Synchronize                 | =
 
-## Fold
-Fold Close                  | zc
-Preview Fold                | h
-
-## Fzf
+## telescope
 Find Buffers                | <Space>fb
 Find Files                  | <Space>ff
+Search and replace          | <Space>ff<Ctrl-q><Esc>:cdo %s/text/newtext/gc
+
+## lsp
+Go to declaration           | gD
+Go to definition            | gd
+Go to implementation        | gi
+Show documentation          | K
+Show signature              | <Ctrl>k
+Show params                 | <Ctrl>p
+Add workspace folder        | <Space>wa
+Remove workspace folder     | <Space>wr
+List workspace folders      | <Space>wl
+Show type definition        | <Space>D
+Rename                      | <Space>rn
+Code action                 | <Space>ca
+Show references             | gr
+
+## harpoon
+Mark file                   | <Space>ja
+Show marked files           | <Space>jm
+Open terminal               | <Space>`
+Open file 1                 | <Space>1
+Open file 2                 | <Space>2
+Open file 3                 | <Space>3
+Open file 4                 | <Space>4
+Open file 5                 | <Space>5

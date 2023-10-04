@@ -1,9 +1,14 @@
+local telescope = require('telescope')
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<Leader>ff', builtin.find_files, {desc="Find files"})
-vim.keymap.set('n', '<Leader>fg', builtin.live_grep, {desc="Live grep"})
 vim.keymap.set('n', '<Leader>fb', builtin.buffers, {desc="Find buffers"})
 vim.keymap.set('n', '<Leader>fh', builtin.help_tags, {desc="Help tags"})
+vim.keymap.set("n", "<leader>fg", telescope.extensions.live_grep_args.live_grep_args, {desc="Seaarch for text in files"})
+
+local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
+vim.keymap.set("n", "<Leader>fw", live_grep_args_shortcuts.grep_word_under_cursor, {desc="Search for text under cursor"})
+vim.keymap.set("v", "<Leader>fw", live_grep_args_shortcuts.grep_visual_selection, {desc="Search for selected text"})
 
 vim.keymap.set('n', ']b', ":bnext<CR>", {desc="Next buffer"})
 vim.keymap.set('n', '[b', ":bprev<CR>", {desc="Previous buffer"})

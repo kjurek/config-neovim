@@ -18,9 +18,14 @@ Close                       | q
 Synchronize                 | =
 
 ## telescope
-Find Buffers                | <Space>fb
-Find Files                  | <Space>ff
-Search and replace          | <Space>ff<Ctrl-q><Esc>:cdo %s/text/newtext/gc
+Quick fix                                           | <Ctrl>q
+Find Buffers                                        | <Space>fb
+Find Files                                          | <Space>ff
+Search text in files                                | <Space>fg
+Search text under cursor/selection in files         | <Space>fw
+Search text in files with extension                 | <Space>fg "text" -t json
+Search text in specific folder                      | <Space>fg "text" folder
+Search text and replace                             | <Space>ff/fb/fg <Ctrl-q> <Esc>:cdo %s/text/newtext/gc
 
 ## lsp
 Go to declaration           | gD

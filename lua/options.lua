@@ -9,6 +9,7 @@ vim.opt.termguicolors = true
 vim.opt.statusline = "%<%f %h%m%r%=%-14.(%l,%c%V%) %P"
 vim.opt.list = true
 vim.opt.autowriteall = true
+vim.opt.clipboard = "unnamed"
 vim.opt.listchars:append "eol:$"
 vim.opt.listchars:append "tab:>-"
 vim.opt.listchars:append "trail:·"

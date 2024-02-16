@@ -15,7 +15,14 @@ vim.keymap.set('n', '[b', ":bprev<CR>", {desc="Previous buffer"})
 
 vim.keymap.set("v", "<C-S-j>", ":m '>+1<CR>gv=gv", {desc="Move selection down"})
 vim.keymap.set("v", "<C-S-k>", ":m '<-2<CR>gv=gv", {desc="Move selection up"})
-vim.keymap.set("v", "<C-S-h>", "<gv", {desc="Move selection left"})
-vim.keymap.set("v", "<C-S-l>", ">gv", {desc="Move selection right"})
+vim.keymap.set("v", "<", "<gv", {desc="Move selection left"})
+vim.keymap.set("v", ">", ">gv", {desc="Move selection right"})
+
+vim.keymap.set("n", "<C-S-j>", ":m +1<CR>", {desc="Move current line down"})
+vim.keymap.set("n", "<C-S-k>", ":m -2<CR>", {desc="Move current line up"})
+vim.keymap.set("n", "<", "<<", {desc="Move current line left"})
+vim.keymap.set("n", ">", ">>", {desc="Move current line right"})
+
+vim.keymap.set("n", "<C-S-f>", ":%! black --quiet - <CR>", {desc="Format buffer"})
 
 vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], {desc="Select normal mode in terminal"})

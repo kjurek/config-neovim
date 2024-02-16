@@ -1,5 +1,8 @@
 # My notes
 
+## vim
+Merge multiple lines        | J
+
 ## buffers
 Previous buffer             | [b
 Next buffer                 | ]b
@@ -11,6 +14,9 @@ Edit Config                 | :e ~/.config/nvim/init.lua
 ## json
 Pretty Print                | :%!jq
 Minify                      | :%!jq -r tostring
+
+## pytest
+Rerun failed                | pytest --lf
 
 ## mini.files
 Open                        | <Space>e

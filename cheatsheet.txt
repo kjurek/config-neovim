@@ -2,6 +2,8 @@
 
 ## vim
 Merge multiple lines        | J
+Replace stuff between parenthesis | ci (
+Surround word with quotes | ciw""<Esc>P
 
 ## buffers
 Previous buffer             | [b

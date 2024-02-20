@@ -12,7 +12,20 @@ return {
         local lspconfig = require('lspconfig')
 
         -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
+        -- lua
+        lspconfig.lua_ls.setup { capabilities = capabilities }
+
+        -- python
         lspconfig.pyright.setup { capabilities = capabilities }
+
+        -- cpp
+        lspconfig.clangd.setup {
+          on_attach = function(client, bufnr)
+            client.server_capabilities.signatureHelpProvider = false
+            on_attach(client, bufnr)
+          end,
+          capabilities = capabilities
+        }
 
         -- luasnip setup
         local luasnip = require 'luasnip'
@@ -92,6 +105,9 @@ return {
                 vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, opts, {desc="Rename"})
                 vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts, {desc="Code action"})
                 vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts, {desc="Show references"})
+                vim.keymap.set('n', '<space>f', function()
+                  vim.lsp.buf.format { async = true }
+                end, opts)
             end,
         })
     end

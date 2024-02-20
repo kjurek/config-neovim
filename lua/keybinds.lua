@@ -23,6 +23,6 @@ vim.keymap.set("n", "<C-S-k>", ":m -2<CR>", {desc="Move current line up"})
 vim.keymap.set("n", "<", "<<", {desc="Move current line left"})
 vim.keymap.set("n", ">", ">>", {desc="Move current line right"})
 
-vim.keymap.set("n", "<C-S-f>", ":%! black --quiet - <CR>", {desc="Format buffer"})
+vim.keymap.set("n", "<C-S-f>", ":%! black --quiet - | isort - <CR>", {desc="Format buffer"})
 
 vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], {desc="Select normal mode in terminal"})
